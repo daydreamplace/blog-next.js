@@ -88,7 +88,7 @@ const Container = styled.div`
     }
 
     a + a {
-      margin-left: 10px;
+      margin-left: 20px;
     }
   }
 `;

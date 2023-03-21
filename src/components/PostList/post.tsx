@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styled from '@emotion/styled';
 
 interface Props {
@@ -26,7 +27,9 @@ const Post = ({ title, content, date }: Props) => {
 
   return (
     <Container>
-      <h2 className='title'>{title}</h2>
+      <Link href='/post'>
+        <h2 className='title'>{title}</h2>
+      </Link>
       <p className='content'>{content}</p>
       <div className='info'>
         <span className='date'>{getPostDate(date)}</span>&nbsp; · &nbsp;<span>0개의 댓글</span>
