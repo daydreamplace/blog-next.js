@@ -5,6 +5,9 @@ const GlobalStyle = createGlobalStyle`
     ${reset}
     body{
         box-sizing: border-box;
+        width: 1140px;
+        width: 768px;
+        margin: 0 auto;
         font-family: 'NEXON Lv2 Gothic';
     }
     a{

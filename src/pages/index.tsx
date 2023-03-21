@@ -1,15 +1,16 @@
 import styled from '@emotion/styled';
+import User from '../components/User';
+import PostList from '@/components/PostList';
 
 const Index = () => {
   return (
-    <div>
-      <Heading>Hello Next.js</Heading>
-    </div>
+    <Container>
+      <User />
+      <PostList />
+    </Container>
   );
 };
 
-const Heading = styled.h1`
-  color: black;
-`;
+const Container = styled.div``;
 
 export default Index;
