@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 import styled from '@emotion/styled';
 import Post from './post';
 
@@ -36,7 +35,6 @@ const PostList = () => {
   useEffect(() => {
     const loader = async () => {
       try {
-        // await axios.get();
         setPostList(posts);
       } catch (error) {
         console.log(error);
@@ -48,8 +46,8 @@ const PostList = () => {
     <Container>
       <h3>게시글</h3>
       <Border />
-      {postList.map((post, index) => (
-        <Post key={index} title={post.title} content={post.content} date={post.created_at} />
+      {postList.map(post => (
+        <Post key={post.title} title={post.title} content={post.content} date={post.created_at} />
       ))}
     </Container>
   );
