@@ -141,6 +141,11 @@ const Border = styled.div`
   margin-top: 2rem;
   margin-bottom: 1.5rem;
   background: #e9ecef;
+
+  @media (max-width: 768px) {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
 `;
 
 export default User;

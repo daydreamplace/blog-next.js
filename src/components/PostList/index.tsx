@@ -57,10 +57,23 @@ const PostList = () => {
 const Container = styled.div`
   margin-top: 3rem;
 
+  @media (max-width: 1024px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 2.5rem;
+  }
+
   h3 {
     color: #0c70f2;
     font-size: 1.325rem;
     font-weight: 600;
+
+    @media (max-width: 768px) {
+      font-size: 1.125rem;
+    }
   }
 
   div + div {

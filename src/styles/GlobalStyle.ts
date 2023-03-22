@@ -5,10 +5,12 @@ const GlobalStyle = createGlobalStyle`
     ${reset}
     body{
         box-sizing: border-box;
-        width: 1140px;
         width: 768px;
         margin: 0 auto;
         font-family: 'NEXON Lv2 Gothic';
+        @media (max-width: 768px) {
+            width: 100%;
+        }
     }
     a{
         text-decoration: none;

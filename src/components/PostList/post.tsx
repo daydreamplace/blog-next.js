@@ -43,13 +43,24 @@ const Container = styled.div`
   padding-bottom: 4rem;
   line-height: 1.5;
 
+  @media (max-width: 768px) {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
   .title {
-    font-size: 1.5rem;
     color: #212529;
+    font-size: 1.5rem;
+    font-weight: 700;
     word-break: keep-all;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    @media (max-width: 768px) {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
   }
 
   .title:hover {
@@ -67,6 +78,11 @@ const Container = styled.div`
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-line-clamp: 3;
+
+    @media (max-width: 768px) {
+      margin-bottom: 1.5rem;
+      font-size: 0.875rem;
+    }
   }
 
   .info {
@@ -76,6 +92,10 @@ const Container = styled.div`
     margin-top: 1rem;
     color: #868e96;
     font-size: 0.9rem;
+
+    @media (max-width: 768px) {
+      font-size: 0.75rem;
+    }
   }
 `;
 
