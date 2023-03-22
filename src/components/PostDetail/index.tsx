@@ -8,7 +8,9 @@ const PostDetail = () => {
       <h1>브라우저 주소창에 www.google.com을 입력하면 어떤 일이 일어나는가</h1>
       <div className='info-wrapper'>
         <div className='post-info'>
-          <span className='user-name'>Youbin Park</span>&nbsp; · &nbsp;<span className='date'>2023년 3월 22일</span>
+          <span className='user-name'>Youbin Park</span>
+          &nbsp; · &nbsp;
+          <span className='date'>2023년 3월 22일</span>
         </div>
         <div className='buttons'>
           <EditButton text='수정' />
@@ -31,6 +33,7 @@ const Container = styled.div`
   margin-top: 3rem;
   margin-left: auto;
   margin-right: auto;
+  cursor: default;
 
   h1 {
     margin-top: 0px;
@@ -63,16 +66,6 @@ const Container = styled.div`
     }
 
     .buttons {
-      button {
-        margin-top: 3px;
-        border: none;
-        outline: none;
-        background: none;
-        color: #868e96;
-        font-size: inherit;
-        cursor: pointer;
-      }
-
       button + button {
         margin-left: 20px;
       }

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import styled from '@emotion/styled';
+import EditButton from '../../EditButton';
 import user from '../../../../assets/user.png';
 
 const Comment = () => {
@@ -12,6 +13,10 @@ const Comment = () => {
             <div className='user-name'>youbin park</div>
             <div className='date'>2023년 3월 20일</div>
           </div>
+        </div>
+        <div className='edit'>
+          <EditButton text='수정' />
+          <EditButton text='삭제' />
         </div>
       </div>
       <div className='comment-content'>
@@ -48,6 +53,7 @@ const Container = styled.div`
 
       .comment-info {
         margin-left: 1rem;
+        cursor: default;
 
         .user-name {
           font-size: 1.2rem;
@@ -59,6 +65,16 @@ const Container = styled.div`
           color: #868e96;
           font-size: 0.9rem;
         }
+      }
+    }
+
+    .edit {
+      button + button {
+        margin-left: 20px;
+      }
+
+      button:hover {
+        color: #0c70f2;
       }
     }
   }
