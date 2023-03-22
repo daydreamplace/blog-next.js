@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
-import Post from './post';
+import Post from './Post';
+import Button from '../Button';
 
 interface PostType {
   title: string;
@@ -45,7 +46,10 @@ const PostList = () => {
 
   return (
     <Container>
-      <h3>게시글</h3>
+      <div className='list-header'>
+        <h3>게시글</h3>
+        <Button text='작성하기' />
+      </div>
       <Border />
       {postList.map(post => (
         <Post key={post.title} title={post.title} content={post.content} date={post.created_at} />
@@ -66,13 +70,26 @@ const Container = styled.div`
     margin-top: 2.5rem;
   }
 
-  h3 {
-    color: #0c70f2;
-    font-size: 1.325rem;
-    font-weight: 600;
+  .list-header {
+    display: flex;
+    justify-content: space-between;
 
-    @media (max-width: 768px) {
-      font-size: 1.125rem;
+    h3 {
+      margin-top: 13px;
+      color: #0c70f2;
+      font-size: 1.325rem;
+      font-weight: 600;
+
+      @media (max-width: 768px) {
+        font-size: 1.125rem;
+      }
+    }
+
+    button {
+      @media (max-width: 768px) {
+        height: 1.75rem;
+        font-size: 0.85rem;
+      }
     }
   }
 
@@ -84,7 +101,7 @@ const Container = styled.div`
 const Border = styled.div`
   width: 30%;
   height: 1px;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   background: #0c70f2;
 `;
 
