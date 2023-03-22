@@ -52,6 +52,10 @@ const Container = styled.div`
     text-overflow: ellipsis;
   }
 
+  .title:hover {
+    color: #0c70f2;
+  }
+
   .content {
     display: -webkit-box;
     -webkit-box-orient: vertical;

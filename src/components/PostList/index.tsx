@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
-import Post from './Post';
+import Post from './post';
 
 interface PostType {
   title: string;
