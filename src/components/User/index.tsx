@@ -85,6 +85,10 @@ const Container = styled.div`
         color: #868e96;
         font-size: 1.5rem;
       }
+
+      svg:hover {
+        color: #5a5f64;
+      }
     }
 
     a + a {
