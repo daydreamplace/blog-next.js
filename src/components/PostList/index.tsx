@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
-import Post from './post';
+import Post from './Post';
 
 interface PostType {
   title: string;
@@ -42,6 +42,7 @@ const PostList = () => {
     };
     loader();
   }, []);
+
   return (
     <Container>
       <h3>게시글</h3>
