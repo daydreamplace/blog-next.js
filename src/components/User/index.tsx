@@ -40,18 +40,37 @@ const User = () => {
 const Container = styled.div`
   margin-top: 5.625rem;
 
+  @media (max-width: 1024px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 3rem;
+  }
+
   .position {
     display: flex;
     -webkit-box-align: center;
     align-items: center;
 
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
     .profile {
       display: block;
-      width: 8rem;
-      height: 8rem;
+      width: 9rem;
+      height: 9rem;
       border-radius: 50%;
       object-fit: cover;
       box-shadow: rgba(0, 0, 0, 0.06) 0px 0px 4px 0px;
+
+      @media (max-width: 768px) {
+        width: 6rem;
+        height: 6rem;
+      }
     }
 
     .user-info {
@@ -61,10 +80,19 @@ const Container = styled.div`
       justify-content: center;
       margin-left: 1rem;
 
+      @media (max-width: 768px) {
+        margin-left: 0;
+        margin-top: 1rem;
+      }
+
       .user-name {
         font-size: 1.5rem;
         font-weight: 700;
         line-height: 1.5;
+
+        @media (max-width: 768px) {
+          font-size: 1.25rem;
+        }
       }
 
       .description {
@@ -73,6 +101,12 @@ const Container = styled.div`
         font-size: 1.125rem;
         line-height: 1.5;
         white-space: pre-wrap;
+
+        @media (max-width: 768px) {
+          margin-top: 0.5rem;
+          font-size: 1rem;
+          letter-spacing: -0.004em;
+        }
       }
     }
   }
@@ -84,6 +118,10 @@ const Container = styled.div`
       svg {
         color: #868e96;
         font-size: 1.5rem;
+
+        @media (max-width: 768px) {
+          font-size: 1.25rem;
+        }
       }
 
       svg:hover {

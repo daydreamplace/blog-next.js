@@ -11,6 +11,11 @@ const Index = () => {
   );
 };
 
-const Container = styled.div``;
+const Container = styled.div`
+  @media (max-width: 1024px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+`;
 
 export default Index;
