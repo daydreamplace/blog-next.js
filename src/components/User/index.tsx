@@ -54,6 +54,7 @@ const Container = styled.div`
     -webkit-box-align: center;
     align-items: center;
 
+
     @media (max-width: 768px) {
       flex-direction: column;
       align-items: flex-start;
