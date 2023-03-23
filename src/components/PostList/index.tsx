@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styled from '@emotion/styled';
-import Post from './Post';
+import Post from './PostCard';
 import Button from '../Button';
 
 interface PostType {

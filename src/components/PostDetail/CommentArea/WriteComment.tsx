@@ -1,10 +1,11 @@
 import styled from '@emotion/styled';
+import Button from '@/components/Button';
 
 const WriteComment = () => {
   return (
     <Container>
       <textarea placeholder='댓글을 작성하세요' />
-      <button>작성하기</button>
+      <Button text='작성하기' />
     </Container>
   );
 };
@@ -27,22 +28,6 @@ const Container = styled.div`
   textarea:hover,
   textarea:focus {
     outline: 1px solid #0c70f2;
-  }
-
-  button {
-    display: inline-flex;
-    -webkit-box-align: center;
-    align-items: center;
-    padding: 1.25rem 1.5rem;
-    height: 2rem;
-    border: none;
-    border-radius: 20px;
-    outline: none;
-    background: #0c70f2;
-    color: #f1f3f5;
-    font-weight: bold;
-    font-size: 1rem;
-    cursor: pointer;
   }
 
   button:hover {
