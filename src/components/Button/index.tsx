@@ -22,6 +22,10 @@ const Container = styled.button`
   font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    font-size: 0.85rem;
+  }
 `;
 
 export default Button;
