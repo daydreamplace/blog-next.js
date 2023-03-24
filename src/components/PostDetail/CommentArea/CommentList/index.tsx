@@ -7,6 +7,10 @@ interface PostType {
   comment: string;
   created_at: string;
 }
+interface Props {
+  id: number;
+  commentList: any[];
+}
 
 const comments = [
   {
@@ -29,25 +33,31 @@ const comments = [
   },
 ];
 
-const CommentList = () => {
-  const [commentList, setCommentList] = useState<PostType[]>([]);
+const CommentList = ({ id, commentList }: Props) => {
+  // const [commentList, setCommentList] = useState<PostType[]>([]);
 
-  useEffect(() => {
-    const loader = async () => {
-      try {
-        setCommentList(comments);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    loader();
-  }, []);
+  // useEffect(() => {
+  //   const loader = async () => {
+  //     try {
+  //       setCommentList(comments);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   };
+  //   loader();
+  // }, []);
+
+  console.log(commentList);
+
+  const comments = commentList.filter(comment => comment.postId === id);
+
+  console.log('필터', comments);
 
   return (
     <Container>
-      {commentList.map((comment, index) => (
-        <div key={index} className='comment'>
-          <Comment />
+      {comments.map((comment, index) => (
+        <div key={comment.id} className='comment'>
+          <Comment comment={comment} />
         </div>
       ))}
     </Container>

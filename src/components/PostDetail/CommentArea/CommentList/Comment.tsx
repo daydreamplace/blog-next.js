@@ -1,17 +1,23 @@
 import Image from 'next/image';
 import styled from '@emotion/styled';
+import PostDate from '@/components/PostDate';
 import EditButton from '../../EditButton';
-import user from '../../../../assets/user.png';
+import user from '@/assets/user.png';
+import { CommentType } from '@/interface';
 
-const Comment = () => {
+interface Props {
+  comment: CommentType;
+}
+
+const Comment = ({ comment }: Props) => {
   return (
     <Container>
       <div className='info-wrapper'>
         <div className='profile'>
           <Image src={user} alt='profile' />
           <div className='comment-info'>
-            <div className='user-name'>youbin park</div>
-            <div className='date'>2023년 3월 20일</div>
+            <div className='user-name'>{comment.writer}</div>
+            <PostDate date={comment.created_at} />
           </div>
         </div>
         <div className='edit'>
@@ -19,10 +25,7 @@ const Comment = () => {
           <EditButton text='삭제' />
         </div>
       </div>
-      <div className='comment-content'>
-        댓글은 사랑입니다 댓글은 사랑입니다댓글은 사랑입니다댓글은 사랑입니다댓글은 사랑입니다댓글은 사랑입니다댓글은 사랑입니다 댓글은 사랑입니다댓글은 사랑입니다댓글은 사랑입니다댓글은 사랑입니다댓글은 사랑입니다 댓글은 사랑입니다댓글은
-        사랑입니다댓글은 사랑입니다댓글은 사랑입니다댓글은 사랑입니다댓글은 사랑입니다
-      </div>
+      <div className='comment-content'>{comment.content}</div>
     </Container>
   );
 };
@@ -65,6 +68,7 @@ const Container = styled.div`
         }
 
         .user-name {
+          margin-bottom: 10px;
           font-size: 1.2rem;
           font-weight: bold;
 
@@ -73,8 +77,7 @@ const Container = styled.div`
           }
         }
 
-        .date {
-          margin-top: 0.5rem;
+        span {
           color: #868e96;
           font-size: 0.9rem;
 

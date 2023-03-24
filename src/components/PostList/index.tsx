@@ -4,11 +4,11 @@ import Link from 'next/link';
 import styled from '@emotion/styled';
 import PostCard from './PostCard';
 import Button from '../Button';
-import { Post, Comment } from '@/interface';
+import { PostType, CommentType } from '@/interface';
 
 const PostList = () => {
-  const [postList, setPostList] = useState<Post[]>([]);
-  const [commentList, setCommentList] = useState<Comment[]>([]);
+  const [postList, setPostList] = useState<PostType[]>([]);
+  const [commentList, setCommentList] = useState<CommentType[]>([]);
 
   useEffect(() => {
     const loader = async () => {

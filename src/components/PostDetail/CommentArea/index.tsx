@@ -1,15 +1,28 @@
 import styled from '@emotion/styled';
 import CommentList from './CommentList';
 import WriteComment from './WriteComment';
+import { CommentType } from '@/interface';
 
-const CommentArea = () => {
+interface Props {
+  id: number;
+  commentList: CommentType[];
+}
+
+const CommentArea = ({ id, commentList }: Props) => {
+  const countComment = (id: number): number => {
+    let arr: number[] = [];
+    commentList.map(comment => arr.push(comment.postId));
+    let count = arr.filter(value => value === id);
+    return count.length;
+  };
+
   return (
     <Container>
       <h4>
-        <span>10</span>개의 댓글
+        <span>{countComment(id)}</span>개의 댓글
       </h4>
       <WriteComment />
-      <CommentList />
+      <CommentList id={id} commentList={commentList} />
     </Container>
   );
 };

@@ -1,30 +1,54 @@
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import axios from 'axios';
 import styled from '@emotion/styled';
-import CommentArea from './CommentArea';
+import PostDate from '../PostDate';
 import EditButton from './EditButton';
+import CommentArea from './CommentArea';
+import { PostType, CommentType } from '@/interface';
 
 const PostDetail = () => {
+  const router = useRouter();
+  const id = Number(router.query.id);
+  const [post, setPost] = useState<PostType>();
+  const [commentList, setCommentList] = useState<CommentType[]>([]);
+
+  useEffect(() => {
+    const loader = async () => {
+      try {
+        const [posts, comments] = await axios.all([
+          //
+          axios.get('http://localhost:3000/posts'),
+          axios.get('http://localhost:3000/comments'),
+        ]);
+        setPost(posts?.data[(id - 1) as number]);
+        setCommentList(comments.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    loader();
+  }, [id]);
+
   return (
-    <Container>
-      <h1>브라우저 주소창에 www.google.com을 입력하면 어떤 일이 일어나는가</h1>
-      <div className='info-wrapper'>
-        <div className='post-info'>
-          <span className='user-name'>Youbin Park</span>
-          &nbsp; · &nbsp;
-          <span className='date'>2023년 3월 22일</span>
+    post && (
+      <Container>
+        <h1>{post.title}</h1>
+        <div className='info-wrapper'>
+          <div className='post-info'>
+            <span className='user-name'>{post.writer}</span>
+            &nbsp; · &nbsp;
+            <PostDate date={post.updated_at ? post.updated_at : post.created_at} />
+          </div>
+          <div className='buttons'>
+            <EditButton text='수정' />
+            <EditButton text='삭제' />
+          </div>
         </div>
-        <div className='buttons'>
-          <EditButton text='수정' />
-          <EditButton text='삭제' />
-        </div>
-      </div>
-      <div className='content'>
-        사용자가 웹 브라우저를 통해 google.com 을 입력하면 URL 주소 중 도메인 네임 부분을 DNS 서버에서 검색합니다. DNS 서버에서 해당 도메인 네임에 해당하는 IP 주소를 찾아 사용자가 입력한 URL 정보와 함께 전달합니다. 브라우저는 HTTP 프로토콜을 사용하여
-        요청 메시지를 생성하고 HTTP 요청 메시지는 TCP/IP 프로토콜을 사용하여 서버로 전송됩니다. 서버는 response 메시지를 생성하여 다시 브라우저에게 데이터를 전송합니다. 브라우저는 response를 받아 파싱하여 화면에 렌더링합니다. 사용자가 웹 브라우저를
-        통해 google.com 을 입력하면 URL 주소 중 도메인 네임 부분을 DNS 서버에서 검색합니다. DNS 서버에서 해당 도메인 네임에 해당하는 IP 주소를 찾아 사용자가 입력한 URL 정보와 함께 전달합니다. 브라우저는 HTTP 프로토콜을 사용하여 요청 메시지를 생성하고
-        HTTP 요청 메시지는 TCP/IP 프로토콜을 사용하여 서버로 전송됩니다. 서버는 response 메시지를 생성하여 다시 브라우저에게 데이터를 전송합니다. 브라우저는 response를 받아 파싱하여 화면에 렌더링합니다.
-      </div>
-      <CommentArea />
-    </Container>
+        <div className='content'>{post.content}</div>
+        <CommentArea id={id} commentList={commentList} />
+      </Container>
+    )
   );
 };
 

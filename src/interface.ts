@@ -1,5 +1,4 @@
-export interface Post {
-  // /posts
+export interface PostType {
   id: number; // 글번호
   title: string; // 제목
   content: string; // 내용
@@ -9,8 +8,7 @@ export interface Post {
   updated_at?: string; // 수정일자: ISO 8601
 }
 
-export interface Comment {
-  // /comments
+export interface CommentType {
   id: number; // 댓글번호
   postId: number; // 글번호(FK): 댓글이 달린 게시글의 `index`
   parent?: number; // 부모댓글번호: is답글 ? (부모 댓글의 `index`) : undefined
