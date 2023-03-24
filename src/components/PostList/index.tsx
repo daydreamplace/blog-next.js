@@ -1,48 +1,38 @@
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 import Link from 'next/link';
 import styled from '@emotion/styled';
-import Post from './PostCard';
+import PostCard from './PostCard';
 import Button from '../Button';
-
-interface PostType {
-  title: string;
-  content: string;
-  created_at: string;
-}
-
-const posts = [
-  {
-    title: '제목입니다',
-    content:
-      '수학 시간에 y = f(x) 같은 함수를 배운 적이 있다. 프로그래밍에도 함수라는 개념이 존재한다. 수학의 함수와 비슷하지만, 다른 점도 있다. 프로그래밍에서 함수(function)는 일정한 동작을 수행하는 코드를 의미한다. 함수를 미리 만들어두고 원할 때 실행해 정해진 동작을 수행할 수 있게 해준다. 수학 시간에 y = f(x) 같은 함수를 배운 적이 있다. 프로그래밍에도 함수라는 개념이 존재한다. 수학의 함수와 비슷하지만, 다른 점도 있다. 프로그래밍에서 함수(function)는 일정한 동작을 수행하는 코드를 의미한다. 함수를 미리 만들어두고 원할 때 실행해 정해진 동작을 수행할 수 있게 해준다.',
-    created_at: '2023-03-21T00:03:17.000Z',
-  },
-  {
-    title: '제목입니다제목입니다제목입니다제목입니다제목입니다제목입니다제목입니다제목입니다제목입니다',
-    content: '수학 시간에 y = f(x) 같은 함수를 배운 적이 있다. 프로그래밍에도 함수라는 개념이 존재한다. 수학의 함수와 비슷하지만, 다른 점도 있다. 행할 수 있게 해준다.',
-    created_at: '2020-03-17T14:03:17.000Z',
-  },
-  {
-    title: '제목',
-    content:
-      '수학 시간에 y = f(x) 같은 함수를 배운 적이 있다. 프로그래밍에도 함수라는 개념이 존재한다. 수학의 함수와 비슷하지만, 다른 점도 있다. 프로그래밍에서 함수(function)는 일정한 동작을 수행하는 코드를 의미한다. 함수를 미리 만들어두고 원할 때 실행해 정해진 동작을 수행할 수 있게 해준다. 수학 시간에 y = f(x) 같은 함수를 배운 적이 있다. 프로그래밍에도 함수라는 개념이 존재한다. 수학의 함수와 비슷하지만, 다른 점도 있다. 프로그래밍에서 함수(function)는 일정한 동작을 수행하는 코드를 의미한다. 함수를 미리 만들어두고 원할 때 실행해 정해진 동작을 수행할 수 있게 해준다.',
-    created_at: '2023-03-21T14:03:17.000Z',
-  },
-];
+import { Post, Comment } from '@/interface';
 
 const PostList = () => {
-  const [postList, setPostList] = useState<PostType[]>([]);
+  const [postList, setPostList] = useState<Post[]>([]);
+  const [commentList, setCommentList] = useState<Comment[]>([]);
 
   useEffect(() => {
     const loader = async () => {
       try {
-        setPostList(posts);
+        const [posts, comments] = await axios.all([
+          //
+          axios.get('http://localhost:3000/posts'),
+          axios.get('http://localhost:3000/comments'),
+        ]);
+        setPostList(posts.data);
+        setCommentList(comments.data);
       } catch (error) {
         console.log(error);
       }
     };
     loader();
   }, []);
+
+  const countComment = (id: number): number => {
+    let arr: number[] = [];
+    commentList.map(comment => arr.push(comment.postId));
+    let count = arr.filter(value => value === id);
+    return count.length;
+  };
 
   return (
     <Container>
@@ -54,7 +44,7 @@ const PostList = () => {
       </div>
       <Border />
       {postList.map(post => (
-        <Post key={post.title} title={post.title} content={post.content} date={post.created_at} />
+        <PostCard key={post.id} id={post.id} count={countComment(post.id)} title={post.title} content={post.content} date={post.created_at} />
       ))}
     </Container>
   );

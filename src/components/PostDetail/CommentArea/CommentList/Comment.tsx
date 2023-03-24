@@ -49,21 +49,38 @@ const Container = styled.div`
         height: 4rem;
         border-radius: 50%;
         object-fit: cover;
+
+        @media (max-width: 768px) {
+          width: 3rem;
+          height: 3rem;
+        }
       }
 
       .comment-info {
         margin-left: 1rem;
         cursor: default;
 
+        @media (max-width: 768px) {
+          margin-left: 0.5rem;
+        }
+
         .user-name {
           font-size: 1.2rem;
           font-weight: bold;
+
+          @media (max-width: 768px) {
+            font-size: 1rem;
+          }
         }
 
         .date {
           margin-top: 0.5rem;
           color: #868e96;
           font-size: 0.9rem;
+
+          @media (max-width: 768px) {
+            font-size: 0.75rem;
+          }
         }
       }
     }
@@ -83,6 +100,14 @@ const Container = styled.div`
     font-size: 1.125rem;
     line-height: 1.7;
     letter-spacing: -0.004em;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 0.85rem;
+    }
   }
 `;
 

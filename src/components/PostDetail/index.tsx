@@ -35,6 +35,15 @@ const Container = styled.div`
   margin-right: auto;
   cursor: default;
 
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 500px) {
+    margin-top: 1.5rem;
+  }
+
   h1 {
     margin-top: 0px;
     margin-bottom: 2rem;
@@ -45,6 +54,15 @@ const Container = styled.div`
     font-weight: bold;
     word-break: keep-all;
     transition: color 0.125s ease-in 0s;
+
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+    }
+
+    @media (max-width: 500px) {
+      margin-bottom: 1.5rem;
+      font-size: 1.75rem;
+    }
   }
 
   .info-wrapper {
@@ -54,6 +72,10 @@ const Container = styled.div`
     -webkit-box-align: center;
     align-items: center;
     font-size: 1rem;
+
+    @media (max-width: 768px) {
+      font-size: 0.875rem;
+    }
 
     .post-info {
       .user-name {
@@ -78,11 +100,17 @@ const Container = styled.div`
 
   .content {
     width: 768px;
-    margin: 5rem auto 0px;
+    margin: 5rem auto 0;
     color: #212529;
     font-size: 1.2rem;
     line-height: 1.8;
     overflow-wrap: break-word;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-top: 3rem;
+      font-size: 1rem;
+    }
   }
 `;
 

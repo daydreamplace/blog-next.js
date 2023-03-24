@@ -45,8 +45,8 @@ const CommentList = () => {
 
   return (
     <Container>
-      {commentList.map(comment => (
-        <div key={comment.comment} className='comment'>
+      {commentList.map((comment, index) => (
+        <div key={index} className='comment'>
           <Comment />
         </div>
       ))}
@@ -56,6 +56,10 @@ const CommentList = () => {
 
 const Container = styled.div`
   margin-top: 3rem;
+
+  @media (max-width: 768px) {
+    margin-top: 2rem;
+  }
 
   .comment + .comment {
     border-top: 1px solid #f1f3f5;

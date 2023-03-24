@@ -18,6 +18,14 @@ const Container = styled.div`
   margin: 10rem 0;
   color: #212529;
 
+  @media (max-width: 768px) {
+    margin-top: 5rem;
+  }
+
+  @media (max-width: 500px) {
+    margin-top: 3rem;
+  }
+
   h4 {
     margin-bottom: 1rem;
     font-size: 1.125rem;

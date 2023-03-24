@@ -12,8 +12,10 @@ const WriteComment = () => {
 
 const Container = styled.div`
   textarea {
+    box-sizing: border-box;
     width: 100%;
     min-height: 6rem;
+    margin-right: 1.5rem;
     margin-bottom: 1.5rem;
     padding: 1rem 1rem 1.5rem;
     border: 1px solid #f1f3f5;
@@ -23,6 +25,10 @@ const Container = styled.div`
     font-size: 1rem;
     line-height: 1.75;
     resize: none;
+
+    @media (max-width: 768px) {
+      margin-bottom: 1rem;
+    }
   }
 
   textarea:hover,

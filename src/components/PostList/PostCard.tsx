@@ -2,12 +2,14 @@ import Link from 'next/link';
 import styled from '@emotion/styled';
 
 interface Props {
+  id: number;
+  count: number;
   title: string;
   content: string;
   date: string;
 }
 
-const Post = ({ title, content, date }: Props) => {
+const Post = ({ id, title, content, date, count }: Props) => {
   const getPostDate = (date: string): string => {
     const milliSeconds = Date.now() - new Date(date).getTime();
     const seconds = milliSeconds / 1000;
@@ -27,12 +29,12 @@ const Post = ({ title, content, date }: Props) => {
 
   return (
     <Container>
-      <Link href='/post'>
+      <Link href={`/post?${id}`}>
         <h2 className='title'>{title}</h2>
       </Link>
       <p className='content'>{content}</p>
       <div className='info'>
-        <span className='date'>{getPostDate(date)}</span>&nbsp; · &nbsp;<span>0개의 댓글</span>
+        <span className='date'>{getPostDate(date)}</span>&nbsp; · &nbsp;<span>{count}개의 댓글</span>
       </div>
     </Container>
   );
