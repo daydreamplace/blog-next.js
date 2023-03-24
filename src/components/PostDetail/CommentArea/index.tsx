@@ -10,10 +10,7 @@ interface Props {
 
 const CommentArea = ({ id, commentList }: Props) => {
   const countComment = (id: number): number => {
-    let arr: number[] = [];
-    commentList.map(comment => arr.push(comment.postId));
-    let count = arr.filter(value => value === id);
-    return count.length;
+    return commentList.filter(comment => comment.postId === id).length;
   };
 
   return (

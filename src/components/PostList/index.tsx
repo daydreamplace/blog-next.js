@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
 import styled from '@emotion/styled';
@@ -7,8 +7,11 @@ import Button from '../Button';
 import { PostType, CommentType } from '@/interface';
 
 const PostList = () => {
+  const observerRef = useRef<HTMLDivElement | null>(null);
   const [postList, setPostList] = useState<PostType[]>([]);
+  const [visibleList, setVisibleList] = useState<PostType[]>([]);
   const [commentList, setCommentList] = useState<CommentType[]>([]);
+  const [page, setPage] = useState<number>(0);
 
   useEffect(() => {
     const loader = async () => {
@@ -27,11 +30,30 @@ const PostList = () => {
     loader();
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      entries => {
+        if (entries[0].isIntersecting) {
+          setPage(prev => prev + 1);
+        }
+      },
+      { threshold: 1 }
+    );
+    if (observerRef.current) {
+      observer.observe(observerRef.current);
+    }
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  useEffect(() => {
+    const newList = postList.slice(0, page * 10);
+    setVisibleList(newList);
+  }, [page, postList]);
+
   const countComment = (id: number): number => {
-    let arr: number[] = [];
-    commentList.map(comment => arr.push(comment.postId));
-    let count = arr.filter(value => value === id);
-    return count.length;
+    return commentList.filter(comment => comment.postId === id).length;
   };
 
   return (
@@ -43,9 +65,8 @@ const PostList = () => {
         </Link>
       </div>
       <Border />
-      {postList.map(post => (
-        <PostCard key={post.id} id={post.id} count={countComment(post.id)} title={post.title} content={post.content} date={post.created_at} />
-      ))}
+      {visibleList.length > 0 && visibleList.map(post => <PostCard key={post.id} id={post.id} count={countComment(post.id)} title={post.title} content={post.content} date={post.created_at} />)}
+      <div ref={observerRef} />
     </Container>
   );
 };

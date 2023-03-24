@@ -78,7 +78,7 @@
       "id": 9
     },
     {
-      "title": "dsfgdfg",
+      "title": "10번 게시글 10번 게시글 10번 게시글",
       "content": "dfgsdfgsdfgsdfg",
       "writer": "sdfgsdfgs",
       "created_at": "2023-01-20T06:02:36.807Z",
@@ -132,6 +132,54 @@
       "created_at": "2023-01-20T06:02:36.807Z",
       "updated_at": null,
       "id": 16
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 17
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 18
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 19
+    },
+    {
+      "title": "20번 게시글 20번 게시글 20번 게시글 20번 게시글 20번 게시글 20번 게시글 20번 게시글",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 20
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 21
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 22
     }
   ],
   "comments": [
