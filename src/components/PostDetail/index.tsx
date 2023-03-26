@@ -71,7 +71,7 @@ const Container = styled.div`
   h1 {
     margin-top: 0px;
     margin-bottom: 2rem;
-    color: #212529;
+    color: ${props => props.theme.colors.fontColor};
     font-size: 3rem;
     line-height: 1.5;
     letter-spacing: -0.004em;

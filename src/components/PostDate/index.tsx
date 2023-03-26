@@ -1,8 +1,6 @@
-type Date = {
-  date: string;
-};
+import { DateProps } from '@/interface';
 
-const PostDate = ({ date }: Date) => {
+const PostDate = ({ date }: DateProps) => {
   const getPostDate = (date: string): string => {
     const milliSeconds = Date.now() - new Date(date).getTime();
     const seconds = milliSeconds / 1000;

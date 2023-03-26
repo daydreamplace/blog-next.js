@@ -1,10 +1,7 @@
 import styled from '@emotion/styled';
+import { Text } from '@/interface';
 
-interface Props {
-  text: string;
-}
-
-const Button = ({ text }: Props) => {
+const Button = ({ text }: Text) => {
   return <Container>{text}</Container>;
 };
 
@@ -17,7 +14,7 @@ const Container = styled.button`
   border: none;
   border-radius: 20px;
   outline: none;
-  background: #0c70f2;
+  background: ${props => props.theme.colors.main};
   color: #f1f3f5;
   font-weight: bold;
   font-size: 1rem;
@@ -25,6 +22,10 @@ const Container = styled.button`
 
   @media (max-width: 768px) {
     font-size: 0.85rem;
+  }
+
+  &:hover {
+    opacity: 0.8;
   }
 `;
 

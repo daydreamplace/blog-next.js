@@ -1,16 +1,9 @@
 import Link from 'next/link';
 import styled from '@emotion/styled';
 import PostDate from '../PostDate';
+import { PostProps } from '@/interface';
 
-interface Props {
-  id: number;
-  count: number;
-  title: string;
-  content: string;
-  date: string;
-}
-
-const Post = ({ id, title, content, date, count }: Props) => {
+const Post = ({ id, title, content, date, count }: PostProps) => {
   return (
     <Container>
       <Link href={`/post?id=${id}`}>
@@ -36,7 +29,7 @@ const Container = styled.div`
   }
 
   .title {
-    color: #212529;
+    color: ${props => props.theme.colors.fontColor};
     font-size: 1.5rem;
     font-weight: 700;
     word-break: keep-all;

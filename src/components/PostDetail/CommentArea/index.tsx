@@ -1,14 +1,9 @@
 import styled from '@emotion/styled';
 import CommentList from './CommentList';
 import WriteComment from './WriteComment';
-import { CommentType } from '@/interface';
+import { CommentListProps } from '@/interface';
 
-interface Props {
-  id: number;
-  commentList: CommentType[];
-}
-
-const CommentArea = ({ id, commentList }: Props) => {
+const CommentArea = ({ id, commentList }: CommentListProps) => {
   const countComment = (id: number): number => {
     return commentList.filter(comment => comment.postId === id).length;
   };
@@ -26,7 +21,7 @@ const CommentArea = ({ id, commentList }: Props) => {
 
 const Container = styled.div`
   margin: 10rem 0;
-  color: #212529;
+  color: ${props => props.theme.colors.fontColor};
 
   @media (max-width: 768px) {
     margin-top: 5rem;

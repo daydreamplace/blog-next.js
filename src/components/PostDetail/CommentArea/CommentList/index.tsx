@@ -1,13 +1,8 @@
 import styled from '@emotion/styled';
 import Comment from './Comment';
-import { CommentType } from '@/interface';
+import { CommentListProps } from '@/interface';
 
-interface Props {
-  id: number;
-  commentList: CommentType[];
-}
-
-const CommentList = ({ id, commentList }: Props) => {
+const CommentList = ({ id, commentList }: CommentListProps) => {
   const comments = commentList.filter(comment => comment.postId === id);
 
   return (

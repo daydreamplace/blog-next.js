@@ -1,10 +1,7 @@
 import styled from '@emotion/styled';
+import { Text } from '@/interface';
 
-interface Props {
-  text: string;
-}
-
-const EditButton = ({ text }: Props) => {
+const EditButton = ({ text }: Text) => {
   return <Container>{text}</Container>;
 };
 
