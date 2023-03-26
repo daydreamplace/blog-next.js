@@ -1,3 +1,4 @@
+import axios from 'axios';
 import styled from '@emotion/styled';
 import Button from '@/components/Button';
 
@@ -21,7 +22,7 @@ const Container = styled.div`
     border: 1px solid #f1f3f5;
     border-radius: 10px;
     outline: none;
-    color: #212529;
+    color: ${props => props.theme.colors.fontColor};
     font-size: 1rem;
     line-height: 1.75;
     resize: none;
