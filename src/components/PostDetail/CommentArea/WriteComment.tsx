@@ -35,10 +35,6 @@ const Container = styled.div`
   textarea:focus {
     outline: 1px solid ${props => props.theme.colors.main};
   }
-
-  button:hover {
-    opacity: 0.8;
-  }
 `;
 
 export default WriteComment;

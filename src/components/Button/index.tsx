@@ -23,6 +23,10 @@ const Container = styled.button`
   @media (max-width: 768px) {
     font-size: 0.85rem;
   }
+
+  &:hover {
+    opacity: 0.8;
+  }
 `;
 
 export default Button;

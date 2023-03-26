@@ -1,12 +1,19 @@
+import { useRouter } from 'next/router';
 import styled from '@emotion/styled';
 import { BsArrowLeftSquare } from 'react-icons/bs';
 import Button from '../Button';
 
 const Footer = () => {
+  const router = useRouter();
+
+  const getBack = () => {
+    router.back();
+  };
+
   return (
     <Container>
       <div className='default-width wrapper'>
-        <BsArrowLeftSquare />
+        <BsArrowLeftSquare onClick={getBack} />
         <Button text='작성하기' />
       </div>
     </Container>
@@ -30,7 +37,6 @@ const Container = styled.div`
       font-size: 2rem;
     }
 
-    button:hover,
     svg:hover {
       opacity: 0.7;
     }
