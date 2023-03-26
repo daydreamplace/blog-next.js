@@ -33,7 +33,7 @@ const Container = styled.div`
 
   textarea:hover,
   textarea:focus {
-    outline: 1px solid #0c70f2;
+    outline: 1px solid ${props => props.theme.colors.main};
   }
 
   button:hover {

@@ -94,7 +94,7 @@ const Container = styled.div`
       }
 
       button:hover {
-        color: #0c70f2;
+        color: ${props => props.theme.colors.main};
       }
     }
   }

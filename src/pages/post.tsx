@@ -34,7 +34,7 @@ const Container = styled.div`
   }
 
   svg {
-    color: #0c70f2;
+    color: ${props => props.theme.colors.main};
     font-size: 3rem;
     cursor: pointer;
 

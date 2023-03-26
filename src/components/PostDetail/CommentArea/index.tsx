@@ -43,7 +43,7 @@ const Container = styled.div`
     font-weight: 700;
 
     span {
-      color: #0c70f2;
+      color: ${props => props.theme.colors.main};
     }
   }
 `;

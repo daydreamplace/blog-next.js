@@ -89,7 +89,7 @@ const Container = styled.div`
 
     h3 {
       margin-top: 13px;
-      color: #0c70f2;
+      color: ${props => props.theme.colors.main};
       font-size: 1.325rem;
       font-weight: 600;
 
@@ -108,7 +108,7 @@ const Border = styled.div`
   width: 30%;
   height: 1px;
   margin-top: 0.5rem;
-  background: #0c70f2;
+  background: ${props => props.theme.colors.main};
 `;
 
 export default PostList;

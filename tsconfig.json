@@ -14,10 +14,15 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": ["./src/*"],
+      "@emotion/react": ["node_modules/@emotion/react"],
+      "@emotion/utils": ["node_modules/@emotion/utils"]
+    },
+    "types": ["@emotion/react"],
+    "jsxImportSource": "@emotion/react"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/styles/theme.jsx", "src/styles/GlobalStyle.jㅅㄴ"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/styles/theme.jsx", "src/styles/GlobalStyle.jㅅㄴ", "src/styles/GlobalStyle.tsx", "src/styles/GlobalStyle.ts"],
   "exclude": ["node_modules"]
 }

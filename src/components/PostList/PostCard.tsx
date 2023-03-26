@@ -51,7 +51,7 @@ const Container = styled.div`
   }
 
   .title:hover {
-    color: #0c70f2;
+    color: ${props => props.theme.colors.main};
   }
 
   .content {

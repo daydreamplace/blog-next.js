@@ -28,27 +28,27 @@ const PostDetail = () => {
       }
     };
     loader();
-  }, [id]);
+  }, [id, post, commentList]);
+
+  if (!post) return null;
 
   return (
-    post && (
-      <Container>
-        <h1>{post.title}</h1>
-        <div className='info-wrapper'>
-          <div className='post-info'>
-            <span className='user-name'>{post.writer}</span>
-            &nbsp; · &nbsp;
-            <PostDate date={post.updated_at ? post.updated_at : post.created_at} />
-          </div>
-          <div className='buttons'>
-            <EditButton text='수정' />
-            <EditButton text='삭제' />
-          </div>
+    <Container>
+      <h1>{post.title}</h1>
+      <div className='info-wrapper'>
+        <div className='post-info'>
+          <span className='user-name'>{post.writer}</span>
+          &nbsp; · &nbsp;
+          <PostDate date={post.updated_at ? post.updated_at : post.created_at} />
         </div>
-        <div className='content'>{post.content}</div>
-        <CommentArea id={id} commentList={commentList} />
-      </Container>
-    )
+        <div className='buttons'>
+          <EditButton text='수정' />
+          <EditButton text='삭제' />
+        </div>
+      </div>
+      <div className='content'>{post.content}</div>
+      <CommentArea id={id} commentList={commentList} />
+    </Container>
   );
 };
 
@@ -117,7 +117,7 @@ const Container = styled.div`
       }
 
       button:hover {
-        color: #0c70f2;
+        color: ${props => props.theme.colors.main};
       }
     }
   }
