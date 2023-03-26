@@ -18,7 +18,7 @@ const Container = styled.div`
     padding: 0px;
     outline: none;
     border: none;
-    color: #212529;
+    color: ${props => props.theme.colors.fontColor};
     font-weight: 700;
     font-size: 2.75rem;
     line-height: 1.5;

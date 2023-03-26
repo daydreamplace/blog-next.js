@@ -35,7 +35,7 @@ const Container = styled.div`
       outline: none;
       border: none;
       border-bottom: 1px solid transparent;
-      color: #212529;
+      color: ${props => props.theme.colors.fontColor};
       font-size: inherit;
       font-weight: 700;
     }

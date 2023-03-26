@@ -29,7 +29,7 @@ const Container = styled.div`
   }
 
   .title {
-    color: #212529;
+    color: ${props => props.theme.colors.fontColor};
     font-size: 1.5rem;
     font-weight: 700;
     word-break: keep-all;

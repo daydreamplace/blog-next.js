@@ -21,7 +21,7 @@ const CommentArea = ({ id, commentList }: CommentListProps) => {
 
 const Container = styled.div`
   margin: 10rem 0;
-  color: #212529;
+  color: ${props => props.theme.colors.fontColor};
 
   @media (max-width: 768px) {
     margin-top: 5rem;

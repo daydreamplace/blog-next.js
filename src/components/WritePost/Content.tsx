@@ -11,7 +11,7 @@ const Container = styled.textarea`
   padding: 30px 0;
   outline: none;
   border: none;
-  color: #212529;
+  color: ${props => props.theme.colors.fontColor};
   font-weight: 700;
   font-size: 1.75rem;
   line-height: 1.5;
