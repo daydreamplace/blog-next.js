@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
         background: none;
         font-family: 'NEXON Lv2 Gothic';
     }
-    textarea{
+    input, textarea{
         font-family: 'NEXON Lv2 Gothic';
     }
 
