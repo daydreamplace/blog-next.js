@@ -1,8 +1,4 @@
-import React from 'react';
-
-type Props = {};
-
-const write = (props: Props) => {
+const write = () => {
   return <div>write</div>;
 };
 

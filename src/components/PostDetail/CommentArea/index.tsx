@@ -1,14 +1,9 @@
 import styled from '@emotion/styled';
 import CommentList from './CommentList';
 import WriteComment from './WriteComment';
-import { CommentType } from '@/interface';
+import { CommentListProps } from '@/interface';
 
-interface Props {
-  id: number;
-  commentList: CommentType[];
-}
-
-const CommentArea = ({ id, commentList }: Props) => {
+const CommentArea = ({ id, commentList }: CommentListProps) => {
   const countComment = (id: number): number => {
     return commentList.filter(comment => comment.postId === id).length;
   };

@@ -3,13 +3,9 @@ import styled from '@emotion/styled';
 import PostDate from '@/components/PostDate';
 import EditButton from '../../EditButton';
 import user from '@/assets/user.png';
-import { CommentType } from '@/interface';
+import { CommentProps } from '@/interface';
 
-interface Props {
-  comment: CommentType;
-}
-
-const Comment = ({ comment }: Props) => {
+const Comment = ({ comment }: CommentProps) => {
   return (
     <Container>
       <div className='info-wrapper'>

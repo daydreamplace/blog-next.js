@@ -1,16 +1,9 @@
 import Link from 'next/link';
 import styled from '@emotion/styled';
 import PostDate from '../PostDate';
+import { PostProps } from '@/interface';
 
-interface Props {
-  id: number;
-  count: number;
-  title: string;
-  content: string;
-  date: string;
-}
-
-const Post = ({ id, title, content, date, count }: Props) => {
+const Post = ({ id, title, content, date, count }: PostProps) => {
   return (
     <Container>
       <Link href={`/post?id=${id}`}>
