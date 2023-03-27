@@ -1,0 +1,451 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "브라우저 주소창에 www.google.com을 입력하면 어떤 일이 일어나는가",
+      "content": "사용자가 웹 브라우저를 통해 google.com 을 입력하면 URL 주소 중 도메인 네임 부분을 DNS 서버에서 검색합니다. DNS 서버에서 해당 도메인 네임에 해당하는 IP 주소를 찾아 사용자가 입력한 URL 정보와 함께 전달합니다. 브라우저는 HTTP 프로토콜을 사용하여 요청 메시지를 생성하고 HTTP 요청 메시지는 TCP/IP 프로토콜을 사용하여 서버로 전송됩니다.서버는 response 메시지를 생성하여 다시 브라우저에게 데이터를 전송합니다. 브라우저는 response를 받아 파싱하여 화면에 렌더링합니다.",
+      "writer": "EDEN",
+      "password": "password_here",
+      "created_at": "2014-03-17T14:03:17.000Z",
+      "updated_at": null
+    },
+    {
+      "id": 2,
+      "title": "프론트엔드 개발자로서 고민해봐야할 문제.",
+      "content": "1990년대 팀 버너스리에 의해 처음 생긴 웹은 세월이 지나 발전된 형태의 웹으로 변화하고 있다. 정보를 정적으로 보여주던 옛날의 웹과는 달리 요즘의 웹은 다양한 액션을 통해 정보를 보여주어 웹의 복잡성이 늘어났다. 하지만 복잡성이 늘어난 웹은 사용자가 느끼기엔 다소 복잡하고 불편할 수 있다는 단점이 생기게 되었다. 사용자가 서비스를 이용하며 지속되는 불편함을 느끼고 불편함이 누적된다면 해당 서비스를 이탈 할 확률이 올라가게 된다. 예를 들어 동일한 주제의 서비스지만 사용하기 불편한 사이트와 사용하기 편한 사이트가 있다면",
+      "writer": "글쓴이가여기에붙어",
+      "password": "password_her",
+      "created_at": "2016-02-23T15:02:23.000Z",
+      "updated_at": "2016-02-24T15:02:24.000Z"
+    },
+    {
+      "id": 3,
+      "title": "덕마니",
+      "content": "덕마니는 2023년 계묘년을 맞아 **소원을 빌고 덕담을 나누기 위해 기획한 서비스**입니다. 웹 개발자를 꿈꾸며 항상 개발해보고 싶던 사용자 서비스를 주니어 개발자 동료들이 함께하는 팀 덕마니가 되어 꿈을 펼치게 되었습니다. 팀 덕마니 **구성원 모두가 기획과 개발에 참여**하여 사용자 참여 서비스를 개발해냈습니다.",
+      "writer": "글쓴이가여기에붙",
+      "password": "password_he",
+      "created_at": "2018-06-28T18:06:28.000Z",
+      "updated_at": null
+    },
+    {
+      "id": 4,
+      "title": "개발자들을 위한 기술블로그 제작 그리고 개선하는 프로젝트 ",
+      "content": "리그오브레전드 게임을 즐겨하는 개발자 동료들이 모여 기존에 사용하던 기술 블로그인 velog 홈페이지의 불편했던 점을 개선해 만든 팀 프로젝트입니다. 동료 개발자 모두 직접 이용하던 서비스여서 필요했던 기능이나 UX측면에서 불편했던 점들을 모아 개선하고, 블로그의 다양한 기능들과 상태 관리 등을 다루어 기술적으로 배우고자 했습니다. 또한, 프로젝트 시작 전에 동료 개발자들과의 코드 리뷰를 통해 코드를 개선해 나가기로 목표를 세우고, AWS로 배포해 사용자들이 접할 수 있는 사이트로 거듭나고자 했습니다.",
+      "writer": "글쓴이가여기에",
+      "password": "password_h",
+      "created_at": "2021-02-04T21:02:04.000Z",
+      "updated_at": "2021-02-06T21:02:06.000Z"
+    },
+    {
+      "id": 5,
+      "title": "제목이여기",
+      "content": "STARBOX는 Megabox 홈페이지를 모티브로 한 웹 페이지 제작 프로젝트를 프론트엔드, 백엔드 엔지니어와 함께 팀 프로젝트로 진행했습니다. STARBOX는 영화 안내, 영화 티켓 예매 사이트 제작 프로젝트로, 기본적인 CRUD는 물론 OPEN API를 사용할 수 있다는 점과 많은 양의 데이터를 다뤄보고자 진행하게 되었습니다. 기존 사이트는 UI와 기능 부분에서 배울 점이 많았지만 css 유지보수가 어렵게 구성되어있다는 점과 목적을 파악할 수 없는 기능이 있다는 아쉬운 점이 있어 개선해보는 경험을 해보고자 했습니다.",
+      "writer": "글쓴이가여기",
+      "password": "password_",
+      "created_at": "2021-11-09T21:11:09.000Z",
+      "updated_at": null
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 6
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 7
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 8
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 9
+    },
+    {
+      "title": "10번 게시글 10번 게시글 10번 게시글",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 10
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 11
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 12
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 13
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 14
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 15
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 16
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 17
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 18
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 19
+    },
+    {
+      "title": "20번 게시글 20번 게시글 20번 게시글 20번 게시글 20번 게시글 20번 게시글 20번 게시글",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 20
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 21
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 22
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 23
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 24
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 25
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 26
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 27
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 28
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 29
+    },
+    {
+      "title": " 30번째 게시글 30번째 게시글 30번째 게시글 30번째 게시글 30번째 게시글",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 30
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 31
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 32
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 33
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 34
+    },
+    {
+      "title": "dsfgdfg",
+      "content": "dfgsdfgsdfgsdfg",
+      "writer": "sdfgsdfgs",
+      "created_at": "2023-01-20T06:02:36.807Z",
+      "updated_at": null,
+      "id": 35
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "postId": 1,
+      "parent": null,
+      "content": "댓글이여기에붙어요",
+      "writer": "댓쓴이가여기에붙어요",
+      "password": "password_here",
+      "created_at": "2014-03-17T14:04:17.000Z",
+      "updated_at": null
+    },
+    {
+      "id": 2,
+      "postId": 1,
+      "parent": null,
+      "content": "댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요",
+      "writer": "댓쓴이가여기에붙어",
+      "password": "password_her",
+      "created_at": "2014-03-17T14:05:17.000Z",
+      "updated_at": null
+    },
+    {
+      "id": 3,
+      "postId": 1,
+      "parent": 1,
+      "content": "답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙",
+      "writer": "댓쓴이가여기에붙",
+      "password": "password_he",
+      "created_at": "2014-03-17T14:06:17.000Z",
+      "updated_at": null
+    },
+    {
+      "id": 4,
+      "postId": 2,
+      "parent": null,
+      "content": "댓글이여기에붙어요",
+      "writer": "댓쓴이가여기에붙어요",
+      "password": "password_here",
+      "created_at": "2016-02-24T15:02:24.000Z",
+      "updated_at": null
+    },
+    {
+      "id": 5,
+      "postId": 2,
+      "parent": null,
+      "content": "댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요",
+      "writer": "댓쓴이가여기에붙어",
+      "password": "password_her",
+      "created_at": "2016-02-24T15:03:24.000Z",
+      "updated_at": null
+    },
+    {
+      "id": 6,
+      "postId": 2,
+      "parent": 4,
+      "content": "답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙",
+      "writer": "댓쓴이가여기에붙",
+      "password": "password_he",
+      "created_at": "2016-02-24T15:04:24.000Z",
+      "updated_at": null
+    },
+    {
+      "id": 7,
+      "postId": 3,
+      "parent": null,
+      "content": "댓글이여기에붙어요",
+      "writer": "댓쓴이가여기에붙어요",
+      "password": "password_here",
+      "created_at": "2018-06-28T18:06:28.000Z",
+      "updated_at": null
+    },
+    {
+      "id": 8,
+      "postId": 3,
+      "parent": null,
+      "content": "댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요",
+      "writer": "댓쓴이가여기에붙어",
+      "password": "password_her",
+      "created_at": "2018-06-28T18:07:28.000Z",
+      "updated_at": null
+    },
+    {
+      "id": 9,
+      "postId": 3,
+      "parent": 7,
+      "content": "답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙",
+      "writer": "댓쓴이가여기에붙",
+      "password": "password_he",
+      "created_at": "2018-06-28T18:08:28.000Z",
+      "updated_at": null
+    },
+    {
+      "id": 10,
+      "postId": 4,
+      "parent": null,
+      "content": "댓글이여기에붙어요",
+      "writer": "댓쓴이가여기에붙어요",
+      "password": "password_here",
+      "created_at": "2021-02-04T21:02:04.000Z",
+      "updated_at": null
+    },
+    {
+      "id": 11,
+      "postId": 4,
+      "parent": null,
+      "content": "댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요",
+      "writer": "댓쓴이가여기에붙어",
+      "password": "password_her",
+      "created_at": "2021-02-04T21:03:04.000Z",
+      "updated_at": null
+    },
+    {
+      "id": 12,
+      "postId": 4,
+      "parent": 10,
+      "content": "답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙",
+      "writer": "댓쓴이가여기에붙",
+      "password": "password_he",
+      "created_at": "2021-02-04T21:04:04.000Z",
+      "updated_at": null
+    },
+    {
+      "id": 13,
+      "postId": 5,
+      "parent": null,
+      "content": "댓글이여기에붙어요",
+      "writer": "댓쓴이가여기에붙어요",
+      "password": "password_here",
+      "created_at": "2021-11-09T21:12:09.000Z",
+      "updated_at": null
+    },
+    {
+      "id": 14,
+      "postId": 5,
+      "parent": null,
+      "content": "댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요 댓글이여기에붙어요",
+      "writer": "댓쓴이가여기에붙어",
+      "password": "password_her",
+      "created_at": "2021-11-09T21:13:09.000Z",
+      "updated_at": null
+    },
+    {
+      "id": 15,
+      "postId": 5,
+      "parent": 10,
+      "content": "답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙답글이여기에붙",
+      "writer": "댓쓴이가여기에붙",
+      "password": "password_he",
+      "created_at": "2021-11-09T21:14:09.000Z",
+      "updated_at": null
+    },
+    {
+      "id": 16,
+      "postId": 1,
+      "parent": null,
+      "content": "댓글이여기에붙어요",
+      "writer": "댓쓴이가여기에붙어요",
+      "password": "password_here",
+      "created_at": "2014-03-17T14:04:17.000Z",
+      "updated_at": null
+    }
+  ]
+}

@@ -1,38 +1,148 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📋 Next.js와 TypeScript를 활용한 게시판 페이지 만들기
 
-## Getting Started
+스마일드래곤 기업의 사전과제입니다. 과제 안내 노션 페이지를 참고하여 요구 사항 외 저의 해석으로 진행되었습니다. 시간 관계 상 추가 항목의 모든 기능이 구현 된 것은 아니지만, 필수 구현 사항은 모두 진행할 수 있도록 했습니다.
 
-First, run the development server:
+<br />
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
+---
+
+## 🗓 개발 기간
+
+<br />
+
+**기간** : 2023년 3월 20일 ~ 2023년 3월 27일
+<br />
+<br />
+
+---
+
+## 🚧 서버 설치 및 프로그램 실행 방법
+
+<br />
+
+1. Node.js를 설치합니다.
+
+```
+<https://nodejs.org/>
+```
+
+<br />
+
+2. 터미널에서 원하는 폴더 경로로 이동해 레포지토리를 클론 받습니다.
+
+```
+git clone https://github.com/daydreamplace/posts-next.js.git
+```
+<br />
+
+3. 클론 받은 폴더로 이동합니다.
+```
+cd posts-next.js
+```
+
+<br />
+
+4. 패키지를 다운 받습니다.
+
+```
+pnpm i
+```
+
+<br />
+
+5. 터미널에서 json-server를 실행합니다.
+
+```
+json-server ./db.json --port 3000
+```
+
+<br />
+
+6. 프로젝트를 실행합니다.
+
+```
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<br />
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+<br />
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 📂 파일 프로젝트 구조
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- `db.json`: json-server 파일
+- `src/pages`: index(게시글 리스트) 페이지, 게시글 상세페이지, 게시글 작성페이지 폴더
+- `src/components`: components 폴더
+<br />
+<br />
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+---
 
-## Learn More
+## 🛠적용 기술
 
-To learn more about Next.js, take a look at the following resources:
+<br />
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- TypeScript
+- React.js
+- Next.js
+- react-dom
+- react-router-dom
+- emotion
+- styled-components
+- axios
+- react-icons
+- json-server
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<br /><br />
 
-## Deploy on Vercel
+## 📑 구현 기능 (Page 혹은 Component 단위 설명)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<br/>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### ✅ Index (게시글 리스트 페이지)
+
+- `json-server`데이터를 받아 게시글 리스트 컴포넌트 레이아웃 및 기능 구현
+    - 게시판에 작성된 게시글들을 전부 확인 가능 하게 구현
+    - 작성된 게시글의 내용 앞부분 일부와 댓글 수 확인 가능
+    - 작성된 게시글은 10개씩 볼 수 있게 무한 스크롤 기능 구현
+    - 게시글의 제목을 누르면 게시글 상세페이지로 이동
+    - 게시글 리스트의 상단의 작성하기 버튼 클릭시 게시글 작성페이지로 이동
+    - 반응형 레이아웃 적용
+    
+    <br />
+    
+
+### ✅ Post (게시글 상세페이지)
+
+- `json-server`데이터를 받아 게시글 상세페이지 레이아웃 및 기능 구현
+    - 해당하는 게시글의 제목, 내용, 작성일자 확인 가능
+    - 해당하는 게시글의 댓글 갯수와 댓글 내용 확인 가능
+    - 댓글 작성 컴포넌트와 댓글리스트 컴포넌트 레이아웃 및 기능 구현
+    - 상단의 화살표 클릭시 이전페이지로 이동
+    - 반응형 레이아웃 적용
+    
+    <br />
+    
+
+### ✅ Write (게시글 작성페이지)
+
+- 게시글 작성페이지 레이아웃 및 기능 구현
+    - 제목, 작성자, 비밀번호, 내용 등을 입력할 수 있게 구현
+    - 하단의 화살표 클릭시 이전페이지로 이동
+    
+    <br />
+    
+
+<br /><br />
+
+## 📝 회고
+
+ TypeScript와 Next.js 등 새로운 기술을 사용하여, 이전에 작업했던 프로젝트에서 한 단계 더 나아갈 수 있었던 시간이었습니다. 
+
+UI와 UX는 과제 안내 페이지를 참고하여, 제 해석에 따라 구현되었습니다. UI는 간결하게 구현할 수 있도록 하였고, UX 측면에서는 반응형 레이아웃과 여러 가지 요소를 고려하여 반영하였습니다.
+
+ 하지만 아쉬운 점도 있었습니다. 패키지 매니저로 yarn을 사용하려고 했지만 버전 오류로 인해 시간을 많이 소비하게 되었고, 결국 pnpm을 사용하게 되었습니다. 또한 emotion 라이브러리 사용 중에 Global이 적용되지 않아 GlobalStyle 부분만 styled-components와 styled-reset을 사용해야 했습니다. 이 문제를 해결하기 위해 `tsconfig.json`과 `.babelrc`에 여러 가지 항목을 추가해보았지만 원인을 찾지 못했습니다. 
+
+ TypeScript의 사용 중에는 타입 지정과 예외 처리 과정을 많이 겪어보지 않아서 에러와 자주 마주쳤지만, 이러한 경험을 통해 TypeScript의 필요성을 더욱 느끼게 되었습니다. TypeScript를 다양하게 경험해보는 것이 중요하다고 생각합니다.
+
+ 컴포넌트를 분리하는 과정에서 고민이 많았던 부분은 폴더 구조였습니다. 구조를 어떻게 해야 할지 고민 끝에, 현재와 같이 구성하는 것으로 결정했습니다. 자주 사용되는 컴포넌트는 `/components` 폴더에 위치시켜 어떤 페이지에서든 재사용할 수 있도록 했으며, 페이지에 들어가는 컴포넌트들도 같은 위치에 위치시켰습니다. 세부 컴포넌트들은 하위 폴더나 파일로 위치시킬 수 있도록 구성했습니다. 다른 좋은 방법이 있을 수 있겠지만, 앞으로 Next.js 프로젝트를 더 진행하면서 적용해 나갈 계획입니다.

@@ -5,7 +5,12 @@ const GlobalStyle = createGlobalStyle`
     ${reset}
     body{
         box-sizing: border-box;
+        width: 768px;
+        margin: 0 auto;
         font-family: 'NEXON Lv2 Gothic';
+        @media (max-width: 768px) {
+            width: 100%;
+        }
     }
     a{
         text-decoration: none;
@@ -14,6 +19,16 @@ const GlobalStyle = createGlobalStyle`
     }
     h1,h2,h3,h4,h5,h6 {
         font-family: 'NEXON Lv1 Gothic OTF';
+    }
+    button {
+        padding: 0;
+        border: none;
+        outline: none;
+        background: none;
+        font-family: 'NEXON Lv2 Gothic';
+    }
+    input, textarea{
+        font-family: 'NEXON Lv2 Gothic';
     }
 
     @font-face {
