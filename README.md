@@ -21,7 +21,7 @@
 1. Node.js를 설치합니다.
 
 ```
-<https://nodejs.org/>
+https://nodejs.org
 ```
 
 <br />
